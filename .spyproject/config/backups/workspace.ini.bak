@@ -1,0 +1,12 @@
+[workspace]
+restore_data_on_startup = True
+save_data_on_exit = True
+save_history = True
+save_non_project_files = False
+project_type = 'empty-project-type'
+recent_files = ['C:\\Users\\mjayant\\.spyder-py3\\temp.py', 'app.py', 'data\\symptom_condition.csv', 'data\\user_ratings.csv', 'data\\prescription_transactions.csv', 'tests.py', 'engine.py', 'demo_recommendations.py', 'enginev2.py']
+
+[main]
+version = 0.2.0
+recent_files = []
+

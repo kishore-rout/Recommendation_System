@@ -1,0 +1,65 @@
+{
+  "best_model": "RandomForest",
+  "rf_cv_mean": 0.987,
+  "gb_cv_mean": 0.974,
+  "test_accuracy": 0.9875,
+  "per_class": {
+    "Acid Reflux": {
+      "precision": 1.0,
+      "recall": 0.977,
+      "f1": 0.988
+    },
+    "Allergies": {
+      "precision": 0.974,
+      "recall": 0.974,
+      "f1": 0.974
+    },
+    "Anxiety": {
+      "precision": 0.974,
+      "recall": 1.0,
+      "f1": 0.987
+    },
+    "Asthma": {
+      "precision": 0.976,
+      "recall": 0.976,
+      "f1": 0.976
+    },
+    "Back Pain": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Common Cold": {
+      "precision": 0.976,
+      "recall": 0.976,
+      "f1": 0.976
+    },
+    "Flu": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Hypertension": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Migraine": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Type 2 Diabetes": {
+      "precision": 0.975,
+      "recall": 0.975,
+      "f1": 0.975
+    }
+  },
+  "assoc": {
+    "n_transactions": 500,
+    "n_freq_itemsets": 79,
+    "n_rules": 54,
+    "min_support": 0.05,
+    "min_confidence": 0.4
+  }
+}

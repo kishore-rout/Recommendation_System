@@ -1,0 +1,501 @@
+transaction_id,medicines,conditions,basket_size
+1,Buspirone|Escitalopram|Hydroxyzine|Sertraline,Anxiety,4
+2,Buspirone|Hydroxyzine|Sertraline,Anxiety,3
+3,Empagliflozin|Sitagliptin,Type 2 Diabetes,2
+4,Cetirizine|Diphenhydramine|Fexofenadine|Fluticasone|Omega-3,Allergies,5
+5,Metoclopramide|Rizatriptan|Sumatriptan,Migraine,3
+6,Empagliflozin|Glipizide|Hydrochlorothiazide|Metoprolol|Sitagliptin|Zinc,Hypertension|Type 2 Diabetes,6
+7,Fluticasone|Ipratropium|Montelukast,Asthma,3
+8,Buspirone|Escitalopram|Lorazepam|Sertraline,Anxiety,4
+9,Albuterol|Budesonide|Fluticasone|Montelukast|Rizatriptan|Sumatriptan,Asthma|Migraine,6
+10,Acetaminophen|Amlodipine|Diclofenac|Hydrochlorothiazide|Ibuprofen|Lisinopril|Metoprolol|Naproxen,Back Pain|Hypertension,8
+11,Dextromethorphan|Probiotics|Pseudoephedrine|Vitamin C,Common Cold,4
+12,Acetaminophen|Dextromethorphan|Diclofenac|Ibuprofen|Oseltamivir,Back Pain|Flu,5
+13,Acetaminophen|Ibuprofen|Rizatriptan|Sumatriptan,Migraine,4
+14,Acetaminophen|Empagliflozin|Glipizide|Ibuprofen|Insulin|Metformin|Metoclopramide|Vitamin C,Migraine|Type 2 Diabetes,8
+15,Acetaminophen|Antacids|Cyclobenzaprine|Famotidine|Ibuprofen|Naproxen|Omeprazole,Acid Reflux|Back Pain,7
+16,Amlodipine|Cetirizine|Diphenhydramine|Fexofenadine|Lisinopril|Loratadine|Metoprolol|Zinc,Allergies|Hypertension,8
+17,Ibuprofen|Omega-3|Pseudoephedrine|Vitamin C,Common Cold,4
+18,Albuterol|Empagliflozin|Fluticasone|Glipizide|Insulin|Ipratropium|Montelukast|Sitagliptin,Asthma|Type 2 Diabetes,8
+19,Acetaminophen|Dextromethorphan|Lisinopril|Losartan|Metoprolol|Oseltamivir,Flu|Hypertension,6
+20,Antacids|Cetirizine|Diphenhydramine|Esomeprazole|Famotidine|Fexofenadine|Loratadine,Acid Reflux|Allergies,7
+21,Acetaminophen|Dextromethorphan|Electrolytes|Oseltamivir,Flu,4
+22,Acetaminophen|Cyclobenzaprine|Diclofenac|Ibuprofen|Zinc,Back Pain,5
+23,Acetaminophen|Dextromethorphan|Fexofenadine|Fluticasone|Loratadine|Probiotics|Pseudoephedrine|Vitamin C,Allergies|Common Cold,8
+24,Antacids|Omeprazole,Acid Reflux,2
+25,Albuterol|Fluticasone|Ibuprofen|Metoclopramide|Montelukast|Rizatriptan|Sumatriptan,Asthma|Migraine,7
+26,Acetaminophen|Dextromethorphan|Pseudoephedrine|Rizatriptan|Sumatriptan|Vitamin C,Common Cold|Migraine,6
+27,Acetaminophen|Cyclobenzaprine|Diclofenac|Electrolytes|Ibuprofen,Back Pain|Flu,5
+28,Acetaminophen|Electrolytes|Ibuprofen|Naproxen|Zinc,Back Pain|Flu,5
+29,Antacids|Cyclobenzaprine|Diclofenac|Famotidine|Ibuprofen,Acid Reflux|Back Pain,5
+30,Acetaminophen|Esomeprazole|Pseudoephedrine|Ranitidine|Vitamin C|Zinc,Acid Reflux|Common Cold,6
+31,Hydrochlorothiazide|Lisinopril|Metoprolol,Hypertension,3
+32,Empagliflozin|Insulin|Metformin|Sitagliptin,Type 2 Diabetes,4
+33,Budesonide|Montelukast,Asthma,2
+34,Empagliflozin|Glipizide|Metformin|Sitagliptin,Type 2 Diabetes,4
+35,Acetaminophen|Cetirizine|Dextromethorphan|Fexofenadine|Fluticasone|Loratadine|Pseudoephedrine|Vitamin C,Allergies|Common Cold,8
+36,Acetaminophen|Ibuprofen,Back Pain,2
+37,Antacids|Ranitidine,Acid Reflux,2
+38,Hydrochlorothiazide|Losartan|Metoprolol,Hypertension,3
+39,Dextromethorphan|Vitamin C,Common Cold,2
+40,Amlodipine|Hydrochlorothiazide|Insulin|Losartan|Metformin|Sitagliptin|Vitamin C,Hypertension|Type 2 Diabetes,7
+41,Fluticasone|Ipratropium|Montelukast|Vitamin D,Asthma,4
+42,Acetaminophen|Dextromethorphan,Flu,2
+43,Acetaminophen|Dextromethorphan|Pseudoephedrine|Vitamin C,Common Cold,4
+44,Antacids|Esomeprazole|Famotidine,Acid Reflux,3
+45,Acetaminophen|Ibuprofen,Flu,2
+46,Empagliflozin|Insulin|Metformin,Type 2 Diabetes,3
+47,Hydroxyzine|Sertraline,Anxiety,2
+48,Buspirone|Escitalopram|Hydroxyzine,Anxiety,3
+49,Antacids|Ranitidine,Acid Reflux,2
+50,Acetaminophen|Diclofenac,Back Pain,2
+51,Acetaminophen|Buspirone|Dextromethorphan|Electrolytes|Hydroxyzine|Oseltamivir,Anxiety|Flu,6
+52,Acetaminophen|Lorazepam|Metoclopramide|Rizatriptan|Sertraline|Sumatriptan,Anxiety|Migraine,6
+53,Budesonide|Dextromethorphan|Fluticasone|Ibuprofen|Ipratropium|Vitamin C,Asthma|Common Cold,6
+54,Antacids|Esomeprazole|Famotidine,Acid Reflux,3
+55,Acetaminophen|Dextromethorphan|Electrolytes|Ibuprofen|Oseltamivir|Pseudoephedrine|Vitamin C|Vitamin D,Common Cold|Flu,8
+56,Acetaminophen|Ibuprofen|Omega-3,Migraine,3
+57,Metoclopramide|Sumatriptan|Zinc,Migraine,3
+58,Dextromethorphan|Ibuprofen|Vitamin C,Common Cold,3
+59,Albuterol|Fluticasone|Ipratropium|Montelukast,Asthma,4
+60,Empagliflozin|Insulin|Sitagliptin,Type 2 Diabetes,3
+61,Acetaminophen|Diclofenac|Ibuprofen|Naproxen,Back Pain,4
+62,Dextromethorphan|Electrolytes|Fluticasone|Ipratropium|Oseltamivir,Asthma|Flu,5
+63,Budesonide|Fluticasone|Hydroxyzine|Ipratropium|Lorazepam|Vitamin D,Anxiety|Asthma,6
+64,Cyclobenzaprine|Diclofenac|Diphenhydramine|Fexofenadine|Fluticasone|Ibuprofen,Allergies|Back Pain,6
+65,Esomeprazole|Famotidine|Omeprazole|Probiotics,Acid Reflux,4
+66,Acetaminophen|Diclofenac|Ibuprofen|Naproxen,Back Pain,4
+67,Acetaminophen|Electrolytes|Oseltamivir,Flu,3
+68,Diphenhydramine|Loratadine,Allergies,2
+69,Acetaminophen|Ibuprofen|Metoclopramide|Sumatriptan,Migraine,4
+70,Lorazepam|Sertraline,Anxiety,2
+71,Acetaminophen|Cetirizine|Dextromethorphan|Fluticasone|Ibuprofen|Loratadine|Pseudoephedrine,Allergies|Common Cold,7
+72,Ibuprofen|Metoclopramide|Rizatriptan,Migraine,3
+73,Buspirone|Escitalopram|Lorazepam|Sertraline|Vitamin C,Anxiety,5
+74,Acetaminophen|Antacids|Ibuprofen|Omeprazole|Oseltamivir|Ranitidine|Zinc,Acid Reflux|Flu,7
+75,Rizatriptan|Sumatriptan,Migraine,2
+76,Amlodipine|Hydrochlorothiazide|Losartan|Vitamin D,Hypertension,4
+77,Acetaminophen|Naproxen|Omega-3,Back Pain,3
+78,Acetaminophen|Metoclopramide|Vitamin D,Migraine,3
+79,Esomeprazole|Famotidine|Omeprazole|Ranitidine|Vitamin C,Acid Reflux,5
+80,Glipizide|Insulin|Metformin|Sitagliptin,Type 2 Diabetes,4
+81,Amlodipine|Lisinopril|Losartan|Metoprolol,Hypertension,4
+82,Antacids|Cetirizine|Diphenhydramine|Esomeprazole|Famotidine|Fluticasone|Loratadine|Omeprazole,Acid Reflux|Allergies,8
+83,Ibuprofen|Metoclopramide|Rizatriptan|Sumatriptan,Migraine,4
+84,Empagliflozin|Glipizide|Sitagliptin,Type 2 Diabetes,3
+85,Albuterol|Budesonide,Asthma,2
+86,Empagliflozin|Glipizide|Sitagliptin|Zinc,Type 2 Diabetes,4
+87,Dextromethorphan|Pseudoephedrine,Common Cold,2
+88,Glipizide|Metformin,Type 2 Diabetes,2
+89,Acetaminophen|Dextromethorphan|Electrolytes|Oseltamivir,Flu,4
+90,Albuterol|Amlodipine|Budesonide|Fluticasone|Hydrochlorothiazide|Losartan|Montelukast|Vitamin C,Asthma|Hypertension,8
+91,Acetaminophen|Dextromethorphan|Ibuprofen|Probiotics|Pseudoephedrine,Common Cold,5
+92,Cyclobenzaprine|Ibuprofen,Back Pain,2
+93,Empagliflozin|Glipizide,Type 2 Diabetes,2
+94,Diphenhydramine|Fexofenadine|Fluticasone|Rizatriptan|Sumatriptan,Allergies|Migraine,5
+95,Escitalopram|Hydroxyzine|Lorazepam|Sertraline,Anxiety,4
+96,Acetaminophen|Ibuprofen|Probiotics|Pseudoephedrine|Vitamin C,Common Cold,5
+97,Insulin|Sitagliptin,Type 2 Diabetes,2
+98,Glipizide|Insulin|Metformin|Sitagliptin,Type 2 Diabetes,4
+99,Cetirizine|Fexofenadine|Fluticasone|Loratadine,Allergies,4
+100,Dextromethorphan|Pseudoephedrine|Vitamin C,Common Cold,3
+101,Dextromethorphan|Pseudoephedrine|Vitamin C,Common Cold,3
+102,Glipizide|Metformin|Sitagliptin,Type 2 Diabetes,3
+103,Acetaminophen|Electrolytes|Probiotics,Flu,3
+104,Empagliflozin|Ibuprofen|Metformin|Rizatriptan|Sitagliptin,Migraine|Type 2 Diabetes,5
+105,Acetaminophen|Sumatriptan,Migraine,2
+106,Buspirone|Empagliflozin|Hydroxyzine|Insulin|Metformin|Sertraline|Sitagliptin|Vitamin C,Anxiety|Type 2 Diabetes,8
+107,Acetaminophen|Empagliflozin|Glipizide|Ibuprofen|Sitagliptin,Migraine|Type 2 Diabetes,5
+108,Cetirizine|Cyclobenzaprine|Diclofenac|Fexofenadine|Fluticasone|Ibuprofen,Allergies|Back Pain,6
+109,Antacids|Omeprazole|Ranitidine|Vitamin D,Acid Reflux,4
+110,Diclofenac|Naproxen,Back Pain,2
+111,Acetaminophen|Albuterol|Budesonide|Dextromethorphan|Fluticasone|Ipratropium|Pseudoephedrine|Vitamin C|Vitamin D,Asthma|Common Cold,9
+112,Albuterol|Budesonide|Buspirone|Hydroxyzine|Lorazepam|Zinc,Anxiety|Asthma,6
+113,Empagliflozin|Insulin|Lisinopril|Metformin|Metoprolol,Hypertension|Type 2 Diabetes,5
+114,Dextromethorphan|Vitamin C,Common Cold,2
+115,Buspirone|Lorazepam|Sertraline,Anxiety,3
+116,Fexofenadine|Fluticasone,Allergies,2
+117,Amlodipine|Hydrochlorothiazide|Ibuprofen|Metoprolol|Sumatriptan,Hypertension|Migraine,5
+118,Acetaminophen|Cyclobenzaprine|Ibuprofen,Back Pain,3
+119,Acetaminophen|Dextromethorphan|Electrolytes|Ibuprofen,Flu,4
+120,Acetaminophen|Metoclopramide|Vitamin D,Migraine,3
+121,Diphenhydramine|Fexofenadine|Fluticasone,Allergies,3
+122,Antacids|Dextromethorphan|Electrolytes|Famotidine|Ibuprofen|Omeprazole|Oseltamivir,Acid Reflux|Flu,7
+123,Hydrochlorothiazide|Lisinopril|Losartan|Metoprolol,Hypertension,4
+124,Antacids|Famotidine|Omeprazole|Zinc,Acid Reflux,4
+125,Budesonide|Fluticasone,Asthma,2
+126,Cyclobenzaprine|Ibuprofen,Back Pain,2
+127,Cetirizine|Diphenhydramine|Fexofenadine|Fluticasone,Allergies,4
+128,Budesonide|Empagliflozin|Fluticasone|Glipizide|Montelukast|Sitagliptin,Asthma|Type 2 Diabetes,6
+129,Cyclobenzaprine|Diclofenac,Back Pain,2
+130,Acetaminophen|Dextromethorphan|Ibuprofen|Pseudoephedrine,Common Cold,4
+131,Acetaminophen|Cyclobenzaprine|Diclofenac|Ibuprofen|Vitamin C,Back Pain,5
+132,Dextromethorphan|Ibuprofen|Pseudoephedrine|Vitamin C,Common Cold,4
+133,Amlodipine|Hydrochlorothiazide|Lisinopril|Metoprolol,Hypertension,4
+134,Empagliflozin|Insulin,Type 2 Diabetes,2
+135,Glipizide|Insulin|Metformin|Sitagliptin|Vitamin C,Type 2 Diabetes,5
+136,Amlodipine|Lisinopril|Probiotics,Hypertension,3
+137,Ibuprofen|Pseudoephedrine|Vitamin C,Common Cold,3
+138,Acetaminophen|Rizatriptan,Migraine,2
+139,Acetaminophen|Ibuprofen|Metoclopramide,Migraine,3
+140,Buspirone|Escitalopram|Hydroxyzine|Sertraline,Anxiety,4
+141,Cetirizine|Loratadine,Allergies,2
+142,Amlodipine|Hydrochlorothiazide|Lisinopril|Losartan,Hypertension,4
+143,Dextromethorphan|Ibuprofen|Pseudoephedrine,Common Cold,3
+144,Lisinopril|Losartan|Metoprolol|Vitamin D,Hypertension,4
+145,Electrolytes|Ibuprofen|Oseltamivir,Flu,3
+146,Amlodipine|Famotidine|Lisinopril|Losartan|Metoprolol|Omeprazole|Zinc,Acid Reflux|Hypertension,7
+147,Glipizide|Insulin|Metformin,Type 2 Diabetes,3
+148,Budesonide|Ibuprofen|Ipratropium|Pseudoephedrine|Vitamin C,Asthma|Common Cold,5
+149,Empagliflozin|Glipizide|Insulin|Metformin|Zinc,Type 2 Diabetes,5
+150,Insulin|Metformin|Sitagliptin,Type 2 Diabetes,3
+151,Cyclobenzaprine|Diclofenac,Back Pain,2
+152,Glipizide|Metformin,Type 2 Diabetes,2
+153,Acetaminophen|Cyclobenzaprine,Back Pain,2
+154,Amlodipine|Hydrochlorothiazide|Metoprolol|Zinc,Hypertension,4
+155,Buspirone|Escitalopram|Hydroxyzine|Sertraline,Anxiety,4
+156,Hydrochlorothiazide|Metoprolol,Hypertension,2
+157,Buspirone|Hydroxyzine|Lorazepam|Vitamin D,Anxiety,4
+158,Amlodipine|Hydrochlorothiazide|Metoprolol,Hypertension,3
+159,Escitalopram|Hydroxyzine,Anxiety,2
+160,Antacids|Esomeprazole|Famotidine|Omeprazole,Acid Reflux,4
+161,Acetaminophen|Metoclopramide|Rizatriptan|Sumatriptan,Migraine,4
+162,Cetirizine|Diphenhydramine|Fexofenadine|Fluticasone|Hydrochlorothiazide|Lisinopril|Losartan|Metoprolol|Probiotics,Allergies|Hypertension,9
+163,Acetaminophen|Cyclobenzaprine|Diclofenac|Ibuprofen|Pseudoephedrine,Back Pain|Common Cold,5
+164,Albuterol|Antacids|Budesonide|Esomeprazole|Fluticasone,Acid Reflux|Asthma,5
+165,Ibuprofen|Pseudoephedrine|Rizatriptan|Vitamin C,Common Cold|Migraine,4
+166,Amlodipine|Hydrochlorothiazide|Losartan|Metoprolol,Hypertension,4
+167,Acetaminophen|Ibuprofen|Metoclopramide|Rizatriptan|Vitamin C,Migraine,5
+168,Diphenhydramine|Fexofenadine|Fluticasone|Loratadine,Allergies,4
+169,Acetaminophen|Dextromethorphan,Common Cold,2
+170,Dextromethorphan|Electrolytes,Flu,2
+171,Buspirone|Sertraline,Anxiety,2
+172,Acetaminophen|Cyclobenzaprine|Famotidine|Ibuprofen|Ranitidine,Acid Reflux|Back Pain,5
+173,Acetaminophen|Diclofenac|Ibuprofen|Pseudoephedrine|Vitamin C,Back Pain|Common Cold,5
+174,Acetaminophen|Ibuprofen,Migraine,2
+175,Cetirizine|Loratadine,Allergies,2
+176,Ibuprofen|Metoclopramide|Sumatriptan,Migraine,3
+177,Acetaminophen|Buspirone|Hydroxyzine|Lorazepam|Oseltamivir,Anxiety|Flu,5
+178,Acetaminophen|Dextromethorphan|Empagliflozin|Ibuprofen|Insulin|Metformin|Pseudoephedrine|Sitagliptin,Common Cold|Type 2 Diabetes,8
+179,Amlodipine|Lisinopril,Hypertension,2
+180,Cyclobenzaprine|Ibuprofen|Naproxen,Back Pain,3
+181,Cyclobenzaprine|Diclofenac|Ibuprofen|Naproxen|Sumatriptan,Back Pain|Migraine,5
+182,Acetaminophen|Buspirone|Escitalopram|Hydroxyzine|Ibuprofen|Metoclopramide|Vitamin D,Anxiety|Migraine,7
+183,Cetirizine|Fexofenadine|Fluticasone|Insulin|Loratadine|Metformin|Sitagliptin|Vitamin D,Allergies|Type 2 Diabetes,8
+184,Acetaminophen|Hydroxyzine|Ibuprofen|Lorazepam|Sertraline|Sumatriptan,Anxiety|Migraine,6
+185,Diphenhydramine|Fexofenadine|Glipizide|Sitagliptin,Allergies|Type 2 Diabetes,4
+186,Amlodipine|Hydrochlorothiazide|Lisinopril|Losartan,Hypertension,4
+187,Acetaminophen|Ibuprofen|Metoclopramide,Migraine,3
+188,Lisinopril|Losartan|Omega-3,Hypertension,3
+189,Acetaminophen|Dextromethorphan|Electrolytes,Flu,3
+190,Buspirone|Escitalopram|Esomeprazole|Famotidine|Omeprazole|Ranitidine,Acid Reflux|Anxiety,6
+191,Acetaminophen|Metoclopramide|Rizatriptan,Migraine,3
+192,Acetaminophen|Cyclobenzaprine|Diclofenac|Naproxen,Back Pain,4
+193,Fluticasone|Loratadine,Allergies,2
+194,Glipizide|Metformin,Type 2 Diabetes,2
+195,Acetaminophen|Dextromethorphan|Vitamin C|Vitamin D,Common Cold,4
+196,Amlodipine|Losartan,Hypertension,2
+197,Empagliflozin|Glipizide|Probiotics,Type 2 Diabetes,3
+198,Acetaminophen|Dextromethorphan|Ibuprofen|Vitamin C,Back Pain|Common Cold,4
+199,Acetaminophen|Ibuprofen|Metoclopramide|Rizatriptan,Migraine,4
+200,Dextromethorphan|Oseltamivir,Flu,2
+201,Amlodipine|Antacids|Losartan|Metoprolol|Omeprazole,Acid Reflux|Hypertension,5
+202,Acetaminophen|Dextromethorphan|Ibuprofen|Oseltamivir,Common Cold|Flu,4
+203,Acetaminophen|Ibuprofen|Probiotics|Vitamin C,Common Cold,4
+204,Amlodipine|Lisinopril,Hypertension,2
+205,Acetaminophen|Rizatriptan,Migraine,2
+206,Acetaminophen|Vitamin C,Common Cold,2
+207,Acetaminophen|Cyclobenzaprine|Dextromethorphan|Diclofenac|Naproxen|Vitamin C,Back Pain|Common Cold,6
+208,Cetirizine|Cyclobenzaprine|Diclofenac|Fexofenadine|Fluticasone|Ibuprofen|Loratadine|Zinc,Allergies|Back Pain,8
+209,Antacids|Famotidine|Omeprazole|Ranitidine,Acid Reflux,4
+210,Acetaminophen|Dextromethorphan|Hydrochlorothiazide|Ibuprofen|Lisinopril|Losartan|Metoprolol|Pseudoephedrine|Zinc,Common Cold|Hypertension,9
+211,Buspirone|Escitalopram|Hydroxyzine|Sertraline,Anxiety,4
+212,Lisinopril|Losartan,Hypertension,2
+213,Antacids|Esomeprazole|Famotidine|Omeprazole|Vitamin D,Acid Reflux,5
+214,Acetaminophen|Cyclobenzaprine|Diclofenac|Ibuprofen,Back Pain,4
+215,Empagliflozin|Glipizide|Insulin|Vitamin D,Type 2 Diabetes,4
+216,Fexofenadine|Loratadine,Allergies,2
+217,Buspirone|Escitalopram|Hydrochlorothiazide|Lisinopril|Sertraline|Zinc,Anxiety|Hypertension,6
+218,Ipratropium|Montelukast,Asthma,2
+219,Albuterol|Budesonide|Fluticasone|Ibuprofen|Montelukast|Oseltamivir,Asthma|Flu,6
+220,Lorazepam|Sertraline,Anxiety,2
+221,Cetirizine|Diphenhydramine|Fexofenadine|Fluticasone,Allergies,4
+222,Acetaminophen|Diclofenac|Ibuprofen|Naproxen|Vitamin C,Back Pain|Common Cold,5
+223,Acetaminophen|Empagliflozin|Glipizide|Ibuprofen|Insulin|Metoclopramide|Sitagliptin|Sumatriptan|Vitamin C,Migraine|Type 2 Diabetes,9
+224,Ibuprofen|Pseudoephedrine|Vitamin C,Common Cold,3
+225,Cyclobenzaprine|Naproxen,Back Pain,2
+226,Esomeprazole|Probiotics|Ranitidine,Acid Reflux,3
+227,Electrolytes|Oseltamivir,Flu,2
+228,Acetaminophen|Ibuprofen|Metoclopramide|Rizatriptan,Migraine,4
+229,Cetirizine|Diphenhydramine|Fexofenadine|Fluticasone,Allergies,4
+230,Albuterol|Budesonide|Fluticasone|Montelukast,Asthma,4
+231,Electrolytes|Ibuprofen|Lisinopril|Losartan|Metoprolol,Flu|Hypertension,5
+232,Amlodipine|Losartan,Hypertension,2
+233,Cetirizine|Diphenhydramine|Fexofenadine|Omega-3,Allergies,4
+234,Acetaminophen|Metoclopramide|Rizatriptan|Sumatriptan|Zinc,Migraine,5
+235,Antacids|Diclofenac|Naproxen|Omeprazole,Acid Reflux|Back Pain,4
+236,Amlodipine|Ibuprofen|Lisinopril|Losartan|Metoclopramide|Sumatriptan,Hypertension|Migraine,6
+237,Acetaminophen|Ibuprofen|Naproxen|Vitamin D,Back Pain,4
+238,Cyclobenzaprine|Diclofenac,Back Pain,2
+239,Acetaminophen|Dextromethorphan|Vitamin C,Common Cold,3
+240,Famotidine|Omega-3|Ranitidine,Acid Reflux,3
+241,Dextromethorphan|Ibuprofen|Oseltamivir,Flu,3
+242,Acetaminophen|Diclofenac|Hydrochlorothiazide|Losartan|Naproxen|Vitamin C,Back Pain|Hypertension,6
+243,Budesonide|Ipratropium|Probiotics,Asthma,3
+244,Acetaminophen|Dextromethorphan|Pseudoephedrine|Vitamin C|Zinc,Common Cold,5
+245,Ibuprofen|Oseltamivir,Flu,2
+246,Acetaminophen|Cyclobenzaprine|Dextromethorphan|Diclofenac|Ibuprofen|Naproxen|Pseudoephedrine|Vitamin C,Back Pain|Common Cold,8
+247,Cetirizine|Cyclobenzaprine|Diclofenac|Diphenhydramine|Fluticasone|Loratadine,Allergies|Back Pain,6
+248,Dextromethorphan|Electrolytes|Oseltamivir,Flu,3
+249,Glipizide|Insulin|Metformin|Omega-3|Sitagliptin,Type 2 Diabetes,5
+250,Acetaminophen|Budesonide|Dextromethorphan|Electrolytes|Fluticasone|Montelukast,Asthma|Flu,6
+251,Buspirone|Empagliflozin|Glipizide|Hydroxyzine|Insulin|Lorazepam|Metformin|Sertraline,Anxiety|Type 2 Diabetes,8
+252,Acetaminophen|Cyclobenzaprine|Ibuprofen|Naproxen|Rizatriptan|Sumatriptan,Back Pain|Migraine,6
+253,Fluticasone|Ipratropium|Montelukast|Vitamin D,Asthma,4
+254,Acetaminophen|Electrolytes|Esomeprazole|Ibuprofen|Omeprazole|Oseltamivir,Acid Reflux|Flu,6
+255,Ibuprofen|Metoclopramide|Rizatriptan|Sumatriptan,Migraine,4
+256,Famotidine|Omeprazole,Acid Reflux,2
+257,Buspirone|Hydroxyzine|Sertraline|Vitamin D,Anxiety,4
+258,Acetaminophen|Cyclobenzaprine|Ibuprofen|Rizatriptan|Sumatriptan|Vitamin D,Back Pain|Migraine,6
+259,Acetaminophen|Dextromethorphan|Electrolytes|Ibuprofen,Flu,4
+260,Acetaminophen|Dextromethorphan|Ibuprofen|Omega-3|Pseudoephedrine,Common Cold,5
+261,Diclofenac|Naproxen|Omega-3,Back Pain,3
+262,Cetirizine|Dextromethorphan|Electrolytes|Ibuprofen|Loratadine|Oseltamivir|Vitamin C,Allergies|Flu,7
+263,Lorazepam|Sertraline,Anxiety,2
+264,Antacids|Esomeprazole|Omeprazole|Vitamin D,Acid Reflux,4
+265,Antacids|Esomeprazole|Vitamin C,Acid Reflux,3
+266,Esomeprazole|Famotidine|Omeprazole,Acid Reflux,3
+267,Ibuprofen|Oseltamivir,Flu,2
+268,Amlodipine|Escitalopram|Hydroxyzine|Metoprolol|Sertraline|Vitamin D,Anxiety|Hypertension,6
+269,Glipizide|Losartan|Metformin|Metoprolol,Hypertension|Type 2 Diabetes,4
+270,Ibuprofen|Metoclopramide|Rizatriptan,Migraine,3
+271,Acetaminophen|Ibuprofen|Vitamin C,Common Cold,3
+272,Acetaminophen|Cyclobenzaprine|Diclofenac|Ibuprofen,Back Pain,4
+273,Buspirone|Hydroxyzine|Omega-3|Sertraline,Anxiety,4
+274,Glipizide|Metformin|Sitagliptin,Type 2 Diabetes,3
+275,Acetaminophen|Ibuprofen|Oseltamivir|Probiotics,Flu,4
+276,Buspirone|Empagliflozin|Escitalopram|Insulin,Anxiety|Type 2 Diabetes,4
+277,Diclofenac|Ibuprofen,Back Pain,2
+278,Cetirizine|Diphenhydramine|Fluticasone|Ibuprofen|Loratadine|Metoclopramide|Sumatriptan,Allergies|Migraine,7
+279,Empagliflozin|Glipizide,Type 2 Diabetes,2
+280,Ibuprofen|Rizatriptan|Sumatriptan,Migraine,3
+281,Antacids|Famotidine|Omeprazole|Ranitidine,Acid Reflux,4
+282,Buspirone|Escitalopram|Hydroxyzine|Vitamin D,Anxiety,4
+283,Dextromethorphan|Ibuprofen|Oseltamivir|Zinc,Flu,4
+284,Acetaminophen|Ibuprofen|Rizatriptan|Sumatriptan,Migraine,4
+285,Buspirone|Escitalopram|Hydroxyzine|Insulin|Sitagliptin,Anxiety|Type 2 Diabetes,5
+286,Buspirone|Escitalopram|Hydroxyzine|Lorazepam|Probiotics,Anxiety,5
+287,Hydrochlorothiazide|Losartan,Hypertension,2
+288,Antacids|Cetirizine|Diphenhydramine|Esomeprazole|Fexofenadine|Loratadine|Omeprazole|Ranitidine,Acid Reflux|Allergies,8
+289,Glipizide|Insulin,Type 2 Diabetes,2
+290,Acetaminophen|Electrolytes|Ibuprofen|Oseltamivir,Flu,4
+291,Fexofenadine|Fluticasone|Vitamin D,Allergies,3
+292,Budesonide|Fluticasone|Glipizide|Insulin|Ipratropium|Metformin|Montelukast,Asthma|Type 2 Diabetes,7
+293,Albuterol|Budesonide|Montelukast|Zinc,Asthma,4
+294,Ibuprofen|Metoclopramide,Migraine,2
+295,Ibuprofen|Vitamin C,Common Cold,2
+296,Escitalopram|Lorazepam,Anxiety,2
+297,Acetaminophen|Antacids|Famotidine|Ibuprofen|Metoclopramide|Omega-3|Ranitidine|Rizatriptan,Acid Reflux|Migraine,8
+298,Antacids|Famotidine|Omeprazole,Acid Reflux,3
+299,Hydrochlorothiazide|Lisinopril|Losartan|Metoprolol,Hypertension,4
+300,Acetaminophen|Amlodipine|Cyclobenzaprine|Diclofenac|Hydrochlorothiazide|Losartan|Metoprolol|Vitamin C,Back Pain|Hypertension,8
+301,Acetaminophen|Amlodipine|Hydrochlorothiazide|Ibuprofen|Metoclopramide|Rizatriptan,Hypertension|Migraine,6
+302,Acetaminophen|Sumatriptan,Migraine,2
+303,Albuterol|Dextromethorphan|Electrolytes|Ipratropium|Oseltamivir,Asthma|Flu,5
+304,Cetirizine|Escitalopram|Fexofenadine|Fluticasone|Hydroxyzine|Loratadine|Lorazepam|Sertraline|Zinc,Allergies|Anxiety,9
+305,Acetaminophen|Cyclobenzaprine|Diclofenac|Naproxen|Omega-3,Back Pain,5
+306,Acetaminophen|Empagliflozin|Glipizide|Ibuprofen|Metformin|Omega-3|Pseudoephedrine|Vitamin C,Common Cold|Type 2 Diabetes,8
+307,Acetaminophen|Cyclobenzaprine|Ibuprofen|Naproxen,Back Pain,4
+308,Cetirizine|Dextromethorphan|Diphenhydramine|Electrolytes|Fexofenadine|Ibuprofen|Loratadine|Oseltamivir|Vitamin C,Allergies|Flu,9
+309,Acetaminophen|Cyclobenzaprine|Ibuprofen|Naproxen,Back Pain,4
+310,Acetaminophen|Buspirone|Escitalopram|Hydroxyzine|Ibuprofen|Pseudoephedrine|Sertraline|Vitamin C,Anxiety|Common Cold,8
+311,Ibuprofen|Rizatriptan|Vitamin D,Migraine,3
+312,Cetirizine|Diphenhydramine|Esomeprazole|Famotidine,Acid Reflux|Allergies,4
+313,Amlodipine|Cyclobenzaprine|Diclofenac|Hydrochlorothiazide|Ibuprofen|Losartan|Naproxen,Back Pain|Hypertension,7
+314,Fexofenadine|Loratadine,Allergies,2
+315,Acetaminophen|Electrolytes|Zinc,Flu,3
+316,Albuterol|Budesonide|Escitalopram|Fluticasone|Hydroxyzine|Lorazepam,Anxiety|Asthma,6
+317,Buspirone|Escitalopram|Hydroxyzine|Vitamin C,Anxiety,4
+318,Budesonide|Buspirone|Fluticasone|Lorazepam,Anxiety|Asthma,4
+319,Antacids|Famotidine|Omeprazole|Probiotics|Ranitidine,Acid Reflux,5
+320,Antacids|Famotidine|Hydroxyzine|Omeprazole|Sertraline,Acid Reflux|Anxiety,5
+321,Amlodipine|Hydrochlorothiazide|Lisinopril|Losartan,Hypertension,4
+322,Acetaminophen|Cyclobenzaprine|Diclofenac|Escitalopram|Hydroxyzine|Lorazepam|Naproxen,Anxiety|Back Pain,7
+323,Acetaminophen|Cyclobenzaprine|Diclofenac|Ibuprofen|Lorazepam|Omega-3|Sertraline,Anxiety|Back Pain,7
+324,Buspirone|Lorazepam|Zinc,Anxiety,3
+325,Diphenhydramine|Fexofenadine|Fluticasone|Loratadine|Zinc,Allergies,5
+326,Insulin|Sitagliptin|Vitamin D,Type 2 Diabetes,3
+327,Buspirone|Lorazepam,Anxiety,2
+328,Amlodipine|Hydrochlorothiazide|Losartan,Hypertension,3
+329,Famotidine|Ranitidine,Acid Reflux,2
+330,Acetaminophen|Dextromethorphan|Ibuprofen|Vitamin C,Common Cold,4
+331,Albuterol|Diphenhydramine|Fexofenadine|Ipratropium|Loratadine|Montelukast,Allergies|Asthma,6
+332,Acetaminophen|Diclofenac|Hydrochlorothiazide|Ibuprofen|Losartan|Metoprolol|Vitamin D,Back Pain|Hypertension,7
+333,Acetaminophen|Glipizide|Ibuprofen|Insulin|Metformin|Metoclopramide|Rizatriptan|Sitagliptin,Migraine|Type 2 Diabetes,8
+334,Acetaminophen|Ibuprofen|Metoclopramide|Vitamin D,Migraine,4
+335,Acetaminophen|Electrolytes|Oseltamivir,Flu,3
+336,Acetaminophen|Famotidine|Ibuprofen|Pseudoephedrine|Ranitidine,Acid Reflux|Common Cold,5
+337,Albuterol|Empagliflozin|Fluticasone|Glipizide|Ipratropium|Metformin|Sitagliptin,Asthma|Type 2 Diabetes,7
+338,Albuterol|Amlodipine|Budesonide|Ipratropium|Lisinopril|Losartan|Metoprolol|Montelukast,Asthma|Hypertension,8
+339,Acetaminophen|Cyclobenzaprine|Diclofenac|Ibuprofen|Probiotics,Back Pain,5
+340,Omeprazole|Ranitidine|Vitamin C,Acid Reflux,3
+341,Acetaminophen|Oseltamivir,Flu,2
+342,Electrolytes|Oseltamivir,Flu,2
+343,Albuterol|Budesonide|Dextromethorphan|Montelukast|Omega-3|Vitamin C,Asthma|Common Cold,6
+344,Empagliflozin|Glipizide|Sitagliptin|Zinc,Type 2 Diabetes,4
+345,Amlodipine|Lisinopril|Losartan|Metoprolol,Hypertension,4
+346,Esomeprazole|Famotidine|Omeprazole|Ranitidine|Vitamin C,Acid Reflux,5
+347,Acetaminophen|Buspirone|Dextromethorphan|Hydroxyzine|Lorazepam|Pseudoephedrine|Sertraline|Vitamin C,Anxiety|Common Cold,8
+348,Cyclobenzaprine|Diclofenac|Ibuprofen|Naproxen,Back Pain,4
+349,Budesonide|Fluticasone|Montelukast,Asthma,3
+350,Antacids|Esomeprazole|Ibuprofen|Vitamin C,Acid Reflux|Common Cold,4
+351,Hydrochlorothiazide|Losartan,Hypertension,2
+352,Buspirone|Escitalopram|Hydroxyzine|Lorazepam,Anxiety,4
+353,Buspirone|Cyclobenzaprine|Diclofenac|Escitalopram|Lorazepam|Naproxen,Anxiety|Back Pain,6
+354,Amlodipine|Losartan|Metoprolol,Hypertension,3
+355,Acetaminophen|Ibuprofen|Metoclopramide|Sumatriptan,Migraine,4
+356,Cyclobenzaprine|Diclofenac|Diphenhydramine|Fexofenadine|Fluticasone|Ibuprofen|Vitamin C,Allergies|Back Pain,7
+357,Albuterol|Fluticasone,Asthma,2
+358,Amlodipine|Lisinopril|Vitamin D,Hypertension,3
+359,Insulin|Metformin|Sitagliptin,Type 2 Diabetes,3
+360,Acetaminophen|Dextromethorphan|Electrolytes|Oseltamivir|Probiotics,Flu,5
+361,Hydrochlorothiazide|Losartan,Hypertension,2
+362,Ibuprofen|Sumatriptan,Migraine,2
+363,Electrolytes|Ibuprofen|Oseltamivir|Rizatriptan|Sumatriptan,Flu|Migraine,5
+364,Amlodipine|Cetirizine|Diphenhydramine|Hydrochlorothiazide|Lisinopril|Losartan|Probiotics,Allergies|Hypertension,7
+365,Acetaminophen|Cyclobenzaprine|Ibuprofen|Naproxen,Back Pain|Migraine,4
+366,Dextromethorphan|Ibuprofen|Pseudoephedrine|Vitamin C,Common Cold,4
+367,Buspirone|Empagliflozin|Lorazepam|Metformin,Anxiety|Type 2 Diabetes,4
+368,Cyclobenzaprine|Diclofenac|Naproxen|Vitamin D,Back Pain,4
+369,Acetaminophen|Diclofenac|Hydrochlorothiazide|Ibuprofen|Lisinopril|Losartan|Metoprolol|Naproxen,Back Pain|Hypertension,8
+370,Acetaminophen|Electrolytes|Ibuprofen,Flu,3
+371,Hydrochlorothiazide|Lisinopril|Losartan|Metoprolol|Vitamin D,Hypertension,5
+372,Acetaminophen|Cetirizine|Diphenhydramine|Ibuprofen,Allergies|Flu,4
+373,Dextromethorphan|Empagliflozin|Glipizide|Ibuprofen|Probiotics|Pseudoephedrine,Common Cold|Type 2 Diabetes,6
+374,Acetaminophen|Dextromethorphan|Ibuprofen|Vitamin C,Common Cold,4
+375,Albuterol|Dextromethorphan|Fluticasone|Vitamin C,Asthma|Common Cold,4
+376,Buspirone|Sertraline|Vitamin C,Anxiety,3
+377,Antacids|Buspirone|Escitalopram|Esomeprazole|Hydroxyzine|Lorazepam,Acid Reflux|Anxiety,6
+378,Cetirizine|Fexofenadine|Fluticasone|Loratadine,Allergies,4
+379,Cetirizine|Empagliflozin|Fluticasone|Glipizide|Insulin|Sitagliptin,Allergies|Type 2 Diabetes,6
+380,Amlodipine|Antacids|Losartan|Metoprolol|Ranitidine,Acid Reflux|Hypertension,5
+381,Buspirone|Cyclobenzaprine|Diclofenac|Escitalopram|Hydroxyzine|Lorazepam|Vitamin D,Anxiety|Back Pain,7
+382,Cyclobenzaprine|Diclofenac|Diphenhydramine|Fexofenadine,Allergies|Back Pain,4
+383,Acetaminophen|Dextromethorphan|Electrolytes|Glipizide|Insulin|Oseltamivir|Sitagliptin,Flu|Type 2 Diabetes,7
+384,Acetaminophen|Ibuprofen,Migraine,2
+385,Dextromethorphan|Ibuprofen|Pseudoephedrine|Vitamin C,Common Cold,4
+386,Fluticasone|Ipratropium,Asthma,2
+387,Acetaminophen|Naproxen|Vitamin C,Back Pain,3
+388,Buspirone|Escitalopram|Hydroxyzine,Anxiety,3
+389,Acetaminophen|Cyclobenzaprine,Back Pain,2
+390,Buspirone|Diphenhydramine|Escitalopram|Loratadine|Lorazepam|Sertraline,Allergies|Anxiety,6
+391,Acetaminophen|Amlodipine|Dextromethorphan|Hydrochlorothiazide|Lisinopril|Metoprolol,Flu|Hypertension,6
+392,Amlodipine|Hydrochlorothiazide|Metoprolol,Hypertension,3
+393,Glipizide|Insulin|Metformin|Sitagliptin|Vitamin D,Type 2 Diabetes,5
+394,Albuterol|Fluticasone|Probiotics,Asthma,3
+395,Buspirone|Escitalopram|Lorazepam|Metformin|Omega-3|Sertraline|Sitagliptin,Anxiety|Type 2 Diabetes,7
+396,Hydrochlorothiazide|Metoprolol|Vitamin C,Hypertension,3
+397,Ibuprofen|Rizatriptan,Migraine,2
+398,Cyclobenzaprine|Diclofenac|Hydrochlorothiazide|Ibuprofen|Lisinopril|Losartan|Metoprolol|Naproxen,Back Pain|Hypertension,8
+399,Escitalopram|Hydroxyzine|Lorazepam|Sertraline,Anxiety,4
+400,Acetaminophen|Diclofenac|Electrolytes|Ibuprofen|Naproxen|Oseltamivir|Vitamin C,Back Pain|Flu,7
+401,Budesonide|Ipratropium,Asthma,2
+402,Empagliflozin|Probiotics|Sitagliptin,Type 2 Diabetes,3
+403,Fluticasone|Ipratropium,Asthma,2
+404,Glipizide|Insulin|Metformin|Sitagliptin|Zinc,Type 2 Diabetes,5
+405,Acetaminophen|Ibuprofen,Common Cold,2
+406,Cetirizine|Fluticasone|Glipizide|Loratadine|Sitagliptin,Allergies|Type 2 Diabetes,5
+407,Acetaminophen|Hydrochlorothiazide|Losartan|Metoprolol|Sumatriptan,Hypertension|Migraine,5
+408,Albuterol|Budesonide|Cetirizine|Diphenhydramine|Fexofenadine|Fluticasone|Ipratropium|Montelukast|Omega-3,Allergies|Asthma,9
+409,Acetaminophen|Cyclobenzaprine|Dextromethorphan|Vitamin C,Back Pain|Common Cold,4
+410,Dextromethorphan|Ibuprofen|Probiotics,Common Cold,3
+411,Amlodipine|Hydrochlorothiazide|Losartan|Metoprolol|Vitamin D,Hypertension,5
+412,Acetaminophen|Antacids|Ibuprofen|Omeprazole|Pseudoephedrine|Ranitidine,Acid Reflux|Common Cold,6
+413,Cyclobenzaprine|Diclofenac|Fluticasone|Ibuprofen|Ipratropium|Montelukast,Asthma|Back Pain,6
+414,Buspirone|Hydroxyzine|Lorazepam|Sertraline,Anxiety,4
+415,Buspirone|Escitalopram,Anxiety,2
+416,Cetirizine|Fexofenadine|Loratadine,Allergies,3
+417,Buspirone|Hydrochlorothiazide|Lisinopril|Lorazepam|Losartan|Metoprolol|Sertraline,Anxiety|Hypertension,7
+418,Antacids|Esomeprazole|Famotidine|Ranitidine|Vitamin D,Acid Reflux,5
+419,Buspirone|Hydroxyzine|Lorazepam|Sertraline,Anxiety,4
+420,Albuterol|Ipratropium,Asthma,2
+421,Budesonide|Fluticasone|Ipratropium,Asthma,3
+422,Acetaminophen|Dextromethorphan|Probiotics,Common Cold,3
+423,Acetaminophen|Dextromethorphan|Vitamin C,Common Cold,3
+424,Acetaminophen|Cyclobenzaprine|Diclofenac|Naproxen|Omega-3,Back Pain,5
+425,Cetirizine|Dextromethorphan|Fexofenadine|Loratadine|Vitamin C,Allergies|Common Cold,5
+426,Buspirone|Escitalopram|Lorazepam|Sertraline,Anxiety,4
+427,Acetaminophen|Amlodipine|Hydrochlorothiazide|Ibuprofen|Lisinopril|Metoprolol|Omega-3|Rizatriptan|Sumatriptan,Hypertension|Migraine,9
+428,Rizatriptan|Sumatriptan,Migraine,2
+429,Dextromethorphan|Electrolytes|Oseltamivir,Flu,3
+430,Antacids|Famotidine|Vitamin C,Acid Reflux,3
+431,Diclofenac|Diphenhydramine|Fexofenadine|Fluticasone|Loratadine|Naproxen,Allergies|Back Pain,6
+432,Budesonide|Fluticasone|Ipratropium,Asthma,3
+433,Acetaminophen|Escitalopram|Hydroxyzine|Ibuprofen|Lorazepam|Rizatriptan|Sertraline|Vitamin C,Anxiety|Migraine,8
+434,Diphenhydramine|Fluticasone|Loratadine|Metoclopramide|Sumatriptan,Allergies|Migraine,5
+435,Ibuprofen|Rizatriptan,Migraine,2
+436,Acetaminophen|Cyclobenzaprine|Metoclopramide|Naproxen|Rizatriptan|Vitamin D,Back Pain|Migraine,6
+437,Dextromethorphan|Electrolytes|Vitamin C,Flu,3
+438,Amlodipine|Lisinopril|Zinc,Hypertension,3
+439,Buspirone|Escitalopram|Hydrochlorothiazide|Lorazepam|Metoprolol|Sertraline,Anxiety|Hypertension,6
+440,Acetaminophen|Fluticasone|Loratadine|Rizatriptan|Sumatriptan,Allergies|Migraine,5
+441,Antacids|Famotidine|Omeprazole|Ranitidine,Acid Reflux,4
+442,Albuterol|Budesonide|Ipratropium|Metoclopramide|Montelukast|Rizatriptan,Asthma|Migraine,6
+443,Empagliflozin|Glipizide|Insulin,Type 2 Diabetes,3
+444,Empagliflozin|Ibuprofen|Insulin|Metformin|Oseltamivir|Sitagliptin,Flu|Type 2 Diabetes,6
+445,Budesonide|Cetirizine|Fexofenadine|Ipratropium|Loratadine|Montelukast,Allergies|Asthma,6
+446,Albuterol|Fluticasone|Ipratropium|Montelukast|Probiotics,Asthma,5
+447,Acetaminophen|Ibuprofen,Flu,2
+448,Empagliflozin|Insulin|Metformin|Vitamin D,Type 2 Diabetes,4
+449,Albuterol|Antacids|Budesonide|Famotidine|Fluticasone|Ipratropium|Omeprazole|Ranitidine,Acid Reflux|Asthma,8
+450,Cyclobenzaprine|Diclofenac|Empagliflozin|Omega-3|Sitagliptin,Back Pain|Type 2 Diabetes,5
+451,Electrolytes|Ibuprofen|Probiotics,Flu,3
+452,Dextromethorphan|Metoclopramide|Oseltamivir|Rizatriptan,Flu|Migraine,4
+453,Albuterol|Fluticasone|Ipratropium,Asthma,3
+454,Cetirizine|Diphenhydramine|Famotidine|Fluticasone|Loratadine|Omeprazole|Ranitidine,Acid Reflux|Allergies,7
+455,Esomeprazole|Ranitidine,Acid Reflux,2
+456,Glipizide|Metformin|Sitagliptin,Type 2 Diabetes,3
+457,Escitalopram|Lisinopril|Lorazepam|Losartan|Metoprolol,Anxiety|Hypertension,5
+458,Acetaminophen|Diclofenac|Ibuprofen|Naproxen|Vitamin C,Back Pain,5
+459,Dextromethorphan|Electrolytes|Hydrochlorothiazide|Ibuprofen|Lisinopril|Oseltamivir,Flu|Hypertension,6
+460,Acetaminophen|Electrolytes|Ibuprofen|Oseltamivir|Pseudoephedrine|Vitamin C,Common Cold|Flu,6
+461,Buspirone|Escitalopram|Hydroxyzine|Ibuprofen|Lorazepam|Metoclopramide,Anxiety|Migraine,6
+462,Cetirizine|Diphenhydramine|Esomeprazole|Famotidine|Fluticasone|Loratadine,Acid Reflux|Allergies,6
+463,Acetaminophen|Pseudoephedrine|Vitamin C|Vitamin D,Common Cold,4
+464,Acetaminophen|Diclofenac|Escitalopram|Hydroxyzine|Omega-3,Anxiety|Back Pain,5
+465,Acetaminophen|Dextromethorphan|Electrolytes|Escitalopram|Hydroxyzine|Lorazepam|Oseltamivir|Sertraline,Anxiety|Flu,8
+466,Acetaminophen|Dextromethorphan|Omega-3,Common Cold,3
+467,Albuterol|Budesonide|Fluticasone|Probiotics,Asthma,4
+468,Antacids|Esomeprazole|Famotidine|Ranitidine,Acid Reflux,4
+469,Hydrochlorothiazide|Lisinopril|Losartan|Metoprolol,Hypertension,4
+470,Albuterol|Dextromethorphan|Fluticasone|Ibuprofen|Ipratropium|Montelukast|Oseltamivir|Vitamin D,Asthma|Flu,8
+471,Acetaminophen|Albuterol|Fluticasone|Ibuprofen|Pseudoephedrine|Vitamin C,Asthma|Common Cold,6
+472,Acetaminophen|Glipizide|Ibuprofen|Metformin|Sitagliptin|Zinc,Common Cold|Type 2 Diabetes,6
+473,Cetirizine|Diphenhydramine|Fexofenadine|Loratadine|Vitamin D,Allergies,5
+474,Acetaminophen|Glipizide|Ibuprofen|Sitagliptin,Common Cold|Type 2 Diabetes,4
+475,Acetaminophen|Naproxen,Back Pain,2
+476,Amlodipine|Buspirone|Escitalopram|Hydroxyzine|Lorazepam|Losartan,Anxiety|Hypertension,6
+477,Hydrochlorothiazide|Lisinopril|Metoprolol,Hypertension,3
+478,Empagliflozin|Glipizide|Insulin|Sitagliptin|Vitamin C,Type 2 Diabetes,5
+479,Empagliflozin|Insulin|Metformin|Sitagliptin,Type 2 Diabetes,4
+480,Acetaminophen|Ibuprofen|Pseudoephedrine|Vitamin C,Common Cold,4
+481,Cyclobenzaprine|Diclofenac|Ibuprofen|Naproxen,Back Pain,4
+482,Esomeprazole|Famotidine|Ranitidine,Acid Reflux,3
+483,Albuterol|Ipratropium,Asthma,2
+484,Acetaminophen|Ibuprofen|Metoclopramide|Pseudoephedrine|Vitamin C,Common Cold|Migraine,5
+485,Empagliflozin|Glipizide|Metformin,Type 2 Diabetes,3
+486,Acetaminophen|Ibuprofen|Metoclopramide|Rizatriptan,Migraine,4
+487,Acetaminophen|Albuterol|Budesonide|Dextromethorphan|Ibuprofen|Ipratropium|Montelukast|Vitamin C,Asthma|Common Cold,8
+488,Amlodipine|Hydrochlorothiazide|Metoprolol,Hypertension,3
+489,Acetaminophen|Diphenhydramine|Fluticasone|Ibuprofen|Pseudoephedrine|Vitamin C,Allergies|Common Cold,6
+490,Ibuprofen|Rizatriptan|Vitamin C,Migraine,3
+491,Amlodipine|Lisinopril|Losartan,Hypertension,3
+492,Budesonide|Escitalopram|Ipratropium|Lorazepam|Montelukast|Sertraline,Anxiety|Asthma,6
+493,Fluticasone|Loratadine,Allergies,2
+494,Cetirizine|Diphenhydramine|Glipizide|Insulin|Vitamin D,Allergies|Type 2 Diabetes,5
+495,Acetaminophen|Cetirizine|Fexofenadine|Fluticasone|Ibuprofen|Pseudoephedrine,Allergies|Common Cold,6
+496,Antacids|Empagliflozin|Glipizide|Metformin|Omeprazole|Ranitidine,Acid Reflux|Type 2 Diabetes,6
+497,Fluticasone|Glipizide|Ipratropium|Metformin|Sitagliptin,Asthma|Type 2 Diabetes,5
+498,Antacids|Omeprazole|Ranitidine,Acid Reflux,3
+499,Empagliflozin|Glipizide|Metformin|Probiotics|Sitagliptin,Type 2 Diabetes,5
+500,Acetaminophen|Ibuprofen|Vitamin C,Common Cold,3

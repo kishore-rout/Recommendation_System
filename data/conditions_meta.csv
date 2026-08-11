@@ -1,0 +1,11 @@
+condition,medicines,severity,symptoms
+Common Cold,Acetaminophen|Ibuprofen|Dextromethorphan|Pseudoephedrine|Vitamin C,mild,runny_nose|sneezing|sore_throat|mild_fever|cough|fatigue
+Flu,Oseltamivir|Acetaminophen|Ibuprofen|Dextromethorphan|Electrolytes,moderate,high_fever|body_ache|fatigue|cough|headache|chills
+Migraine,Sumatriptan|Ibuprofen|Acetaminophen|Rizatriptan|Metoclopramide,moderate,headache|nausea|light_sensitivity|blurred_vision|fatigue
+Allergies,Cetirizine|Loratadine|Fexofenadine|Diphenhydramine|Fluticasone,mild,sneezing|itchy_eyes|runny_nose|skin_rash|congestion
+Acid Reflux,Omeprazole|Ranitidine|Antacids|Esomeprazole|Famotidine,moderate,heartburn|chest_pain|difficulty_swallowing|nausea|bloating
+Hypertension,Lisinopril|Amlodipine|Losartan|Metoprolol|Hydrochlorothiazide,severe,headache|dizziness|chest_pain|shortness_of_breath|fatigue
+Type 2 Diabetes,Metformin|Glipizide|Sitagliptin|Empagliflozin|Insulin,severe,frequent_urination|increased_thirst|fatigue|blurred_vision|slow_healing
+Asthma,Albuterol|Fluticasone|Montelukast|Budesonide|Ipratropium,moderate,wheezing|shortness_of_breath|chest_tightness|cough|fatigue
+Anxiety,Sertraline|Escitalopram|Buspirone|Lorazepam|Hydroxyzine,moderate,restlessness|rapid_heartbeat|insomnia|fatigue|difficulty_concentrating
+Back Pain,Ibuprofen|Naproxen|Cyclobenzaprine|Acetaminophen|Diclofenac,mild,lower_back_pain|stiffness|muscle_spasm|limited_mobility|fatigue

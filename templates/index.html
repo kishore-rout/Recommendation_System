@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedRec — Medicine Recommendation Engine</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0e17;
+  --surface: #121929;
+  --surface-2: #1a2338;
+  --border: #243049;
+  --text: #e2e8f0;
+  --text-dim: #8896b3;
+  --accent: #ff6b35;
+  --accent-glow: rgba(255,107,53,0.25);
+  --teal: #00d4aa;
+  --teal-glow: rgba(0,212,170,0.2);
+  --red: #ff4757;
+  --yellow: #ffd43b;
+  --blue: #4dabf7;
+  --purple: #b197fc;
+  --purple-glow: rgba(177,151,252,0.2);
+  --radius: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── HEADER ── */
+header {
+  padding: 2rem 2rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,107,53,0.06) 0%, transparent 100%);
+}
+header .logo {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+}
+header .logo span { color: var(--text-dim); font-weight: 400; }
+header .subtitle {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  margin-top: 0.3rem;
+  font-family: 'Space Mono', monospace;
+}
+
+/* ── LAYOUT ── */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 2rem;
+}
+@media (max-width: 960px) { .container { grid-template-columns: 1fr; } }
+
+/* ── PANELS ── */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.panel-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  transition: opacity 0.2s;
+}
+
+/* ── MODE TABS ── */
+.tabs { display: flex; gap: 0.4rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.tab {
+  flex: 1;
+  min-width: 70px;
+  padding: 0.55rem 0.4rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-dim);
+  font-size: 0.7rem;
+  font-family: 'Space Mono', monospace;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+.tab:hover { border-color: var(--accent); color: var(--text); }
+.tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* ── SYMPTOM CHIPS ── */
+.symptom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  transition: opacity 0.25s;
+}
+.symptom-grid::-webkit-scrollbar { width: 4px; }
+.symptom-grid::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+.chip {
+  padding: 0.38rem 0.7rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+.chip:hover { border-color: var(--teal); color: var(--text); }
+.chip.selected {
+  background: rgba(0,212,170,0.15);
+  border-color: var(--teal);
+  color: var(--teal);
+  box-shadow: 0 0 12px var(--teal-glow);
+}
+
+/* ── MEDICINE CHIPS (for association rules) ── */
+.medicine-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  transition: opacity 0.25s;
+}
+.medicine-grid::-webkit-scrollbar { width: 4px; }
+.medicine-grid::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.med-chip {
+  padding: 0.38rem 0.7rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.15s;
+  user-select: none;
+}
+.med-chip:hover { border-color: var(--purple); color: var(--text); }
+.med-chip.selected {
+  background: rgba(177,151,252,0.15);
+  border-color: var(--purple);
+  color: var(--purple);
+  box-shadow: 0 0 12px var(--purple-glow);
+}
+
+/* ── USER SELECT ── */
+.user-section { margin-top: 1.2rem; }
+.user-section label {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  font-family: 'Space Mono', monospace;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.user-select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+}
+.user-select:focus { outline: none; border-color: var(--accent); }
+
+/* ── BUTTON ── */
+.btn-recommend {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, var(--accent), #e8530e);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+.btn-recommend:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 30px var(--accent-glow);
+}
+.btn-recommend:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* ── RESULTS ── */
+.results-area { min-height: 500px; }
+.result-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+.mode-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.mode-badge.content { background: rgba(0,212,170,0.15); color: var(--teal); }
+.mode-badge.collaborative { background: rgba(77,171,247,0.15); color: var(--blue); }
+.mode-badge.association { background: rgba(177,151,252,0.15); color: var(--purple); }
+.mode-badge.hybrid { background: rgba(255,107,53,0.15); color: var(--accent); }
+
+/* ── CONDITION CARDS ── */
+.condition-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  animation: slideIn 0.3s ease-out;
+  transition: border-color 0.2s;
+}
+.condition-card:hover { border-color: var(--teal); }
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.condition-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.4rem; }
+.condition-meta { display: flex; gap: 1rem; font-size: 0.78rem; color: var(--text-dim); margin-bottom: 0.75rem; }
+.confidence-bar { width: 100%; height: 4px; background: var(--border); border-radius: 2px; margin-bottom: 0.75rem; overflow: hidden; }
+.confidence-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--blue)); border-radius: 2px; transition: width 0.6s ease-out; }
+.severity-badge { font-size: 0.68rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-family: 'Space Mono', monospace; text-transform: uppercase; }
+.severity-mild { background: rgba(0,212,170,0.15); color: var(--teal); }
+.severity-moderate { background: rgba(255,212,59,0.15); color: var(--yellow); }
+.severity-severe { background: rgba(255,71,87,0.15); color: var(--red); }
+.med-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.med-pill {
+  padding: 0.35rem 0.65rem;
+  background: rgba(255,107,53,0.1);
+  border: 1px solid rgba(255,107,53,0.3);
+  border-radius: 6px;
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ── SCORE CARDS (collab / hybrid / association) ── */
+.med-score-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  animation: slideIn 0.3s ease-out;
+}
+.med-rank { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--text-dim); width: 28px; }
+.med-score-name { flex: 1; font-weight: 500; }
+.score-value { font-family: 'Space Mono', monospace; font-size: 0.85rem; font-weight: 700; color: var(--accent); }
+
+/* ── ASSOCIATION RULE DETAIL ── */
+.assoc-detail {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-top: 0.3rem;
+  font-family: 'Space Mono', monospace;
+}
+.assoc-detail .tag {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  background: rgba(177,151,252,0.1);
+  border: 1px solid rgba(177,151,252,0.25);
+  border-radius: 4px;
+  margin-right: 0.4rem;
+  font-size: 0.65rem;
+  color: var(--purple);
+}
+
+/* ── PLACEHOLDER ── */
+.placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px; color: var(--text-dim); text-align: center; }
+.placeholder-icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.3; }
+.placeholder-text { font-family: 'Space Mono', monospace; font-size: 0.8rem; line-height: 1.6; }
+
+/* ── METRICS BAR ── */
+.metrics-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
+.metric-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 0.85rem 0.5rem; text-align: center; }
+.metric-value { font-family: 'Space Mono', monospace; font-size: 1.35rem; font-weight: 700; color: var(--teal); }
+.metric-label { font-size: 0.62rem; color: var(--text-dim); margin-top: 0.25rem; font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: 1px; }
+
+/* ── LINKS ── */
+.analytics-link { display: inline-block; margin-top: 1rem; color: var(--blue); font-family: 'Space Mono', monospace; font-size: 0.73rem; text-decoration: none; border-bottom: 1px dashed var(--blue); transition: color 0.2s; }
+.analytics-link:hover { color: var(--accent); border-color: var(--accent); }
+.disclaimer { text-align: center; padding: 1.5rem 2rem; color: var(--text-dim); font-size: 0.7rem; border-top: 1px solid var(--border); margin-top: 2rem; font-family: 'Space Mono', monospace; }
+.spinner { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.7s linear infinite; margin: 0 auto 1rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Hidden sections */
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">MedRec<span>.engine</span></div>
+  <div class="subtitle">Content · Collaborative · Association Rules · Hybrid</div>
+</header>
+
+<!-- Metrics Banner -->
+<div style="max-width:1320px;margin:0 auto;padding:1.5rem 2rem 0;">
+  <div class="metrics-bar">
+    <div class="metric-card">
+      <div class="metric-value">{{ metrics.best_model[:2] }}</div>
+      <div class="metric-label">Best Model</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">{{ "%.1f"|format(metrics.test_accuracy * 100) }}%</div>
+      <div class="metric-label">Test Accuracy</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">{{ "%.1f"|format(metrics.rf_cv_mean * 100) }}%</div>
+      <div class="metric-label">RF 5-Fold CV</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">{{ "%.1f"|format(metrics.gb_cv_mean * 100) }}%</div>
+      <div class="metric-label">GB 5-Fold CV</div>
+    </div>
+    {% if metrics.assoc %}
+    <div class="metric-card">
+      <div class="metric-value" style="color:var(--purple);">{{ metrics.assoc.n_rules }}</div>
+      <div class="metric-label">Assoc Rules</div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="container">
+  <!-- ═══ LEFT PANEL: Controls ═══ -->
+  <div>
+    <div class="panel">
+      <div class="panel-title">Recommendation Mode</div>
+      <div class="tabs">
+        <div class="tab active" data-mode="content" onclick="setMode('content')">Content</div>
+        <div class="tab" data-mode="collaborative" onclick="setMode('collaborative')">Collab</div>
+        <div class="tab" data-mode="association" onclick="setMode('association')">Assoc</div>
+        <div class="tab" data-mode="hybrid" onclick="setMode('hybrid')">Hybrid</div>
+      </div>
+
+      <!-- Symptom Selector -->
+      <div id="symptom-section">
+        <div class="panel-title" id="symptom-label">Select Symptoms</div>
+        <div class="symptom-grid" id="symptom-grid">
+          {% for key, name in symptoms %}
+          <div class="chip" data-key="{{ key }}" onclick="toggleChip(this)">{{ name }}</div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Medicine Selector (for Association Rules) -->
+      <div id="medicine-section" class="hidden">
+        <div class="panel-title">Select Medicines You Take</div>
+        <div class="medicine-grid" id="medicine-grid">
+          {% for med in medicines %}
+          <div class="med-chip" data-med="{{ med }}" onclick="toggleMedChip(this)">{{ med }}</div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- User Selector -->
+      <div class="user-section hidden" id="user-section">
+        <label>User Profile (for collaborative)</label>
+        <select class="user-select" id="user-select">
+          {% for uid in user_ids %}
+          <option value="{{ uid }}">User {{ uid }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <button class="btn-recommend" id="btn-rec" onclick="getRecommendations()">
+        Get Recommendations &rarr;
+      </button>
+
+      <a href="/analytics" class="analytics-link">View model analytics &rarr;</a>
+    </div>
+  </div>
+
+  <!-- ═══ RIGHT PANEL: Results ═══ -->
+  <div class="panel results-area" id="results-area">
+    <div class="placeholder" id="placeholder">
+      <div class="placeholder-icon">&#9877;</div>
+      <div class="placeholder-text">
+        Select a mode and inputs,<br>then click recommend.
+      </div>
+    </div>
+    <div id="results-content" style="display:none;"></div>
+  </div>
+</div>
+
+<div class="disclaimer">
+  &#9888; Educational purpose only — not medical advice. Always consult a healthcare professional.
+</div>
+
+<script>
+let currentMode = 'content';
+
+function setMode(mode) {
+  currentMode = mode;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
+
+  // Toggle visibility of input sections
+  const symptomSection = document.getElementById('symptom-section');
+  const medicineSection = document.getElementById('medicine-section');
+  const userSection = document.getElementById('user-section');
+
+  // Default: hide all optional sections
+  symptomSection.classList.remove('hidden');
+  medicineSection.classList.add('hidden');
+  userSection.classList.add('hidden');
+
+  // Dim/enable symptom grid
+  const symptomGrid = document.getElementById('symptom-grid');
+  const symptomLabel = document.getElementById('symptom-label');
+
+  if (mode === 'content') {
+    symptomGrid.style.opacity = '1';
+    symptomGrid.style.pointerEvents = 'auto';
+  } else if (mode === 'collaborative') {
+    symptomSection.classList.add('hidden');
+    userSection.classList.remove('hidden');
+  } else if (mode === 'association') {
+    symptomSection.classList.add('hidden');
+    medicineSection.classList.remove('hidden');
+  } else if (mode === 'hybrid') {
+    symptomGrid.style.opacity = '1';
+    symptomGrid.style.pointerEvents = 'auto';
+    userSection.classList.remove('hidden');
+  }
+}
+
+function toggleChip(el) { el.classList.toggle('selected'); }
+function toggleMedChip(el) { el.classList.toggle('selected'); }
+
+function getSelectedSymptoms() {
+  return Array.from(document.querySelectorAll('.chip.selected')).map(c => c.dataset.key);
+}
+function getSelectedMedicines() {
+  return Array.from(document.querySelectorAll('.med-chip.selected')).map(c => c.dataset.med);
+}
+
+async function getRecommendations() {
+  const btn = document.getElementById('btn-rec');
+  const resultsContent = document.getElementById('results-content');
+  const placeholder = document.getElementById('placeholder');
+
+  btn.disabled = true;
+  btn.textContent = 'Analysing ...';
+  placeholder.style.display = 'none';
+  resultsContent.innerHTML = '<div style="text-align:center;padding:3rem 0;"><div class="spinner"></div><div style="color:var(--text-dim);font-family:Space Mono,monospace;font-size:0.8rem;">Running models ...</div></div>';
+  resultsContent.style.display = 'block';
+
+  const payload = {
+    mode: currentMode,
+    symptoms: getSelectedSymptoms(),
+    user_id: document.getElementById('user-select').value,
+    medicines: getSelectedMedicines(),
+  };
+
+  try {
+    const resp = await fetch('/recommend', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload),
+    });
+    const data = await resp.json();
+    renderResults(data);
+  } catch(e) {
+    resultsContent.innerHTML = `<div style="color:var(--red);padding:2rem;text-align:center;">Error: ${e.message}</div>`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Get Recommendations \u2192';
+  }
+}
+
+function renderResults(data) {
+  const el = document.getElementById('results-content');
+  let html = `<div class="result-header">
+    <span class="mode-badge ${data.mode}">${data.mode.toUpperCase()}</span>
+    <span style="color:var(--text-dim);font-size:0.78rem;font-family:Space Mono,monospace;">
+      ${data.results.length} result(s)
+    </span>
+  </div>`;
+
+  if (data.results.length === 0) {
+    html += `<div class="placeholder" style="min-height:200px;">
+      <div class="placeholder-text">No results found.<br>Try selecting different inputs.</div>
+    </div>`;
+    el.innerHTML = html;
+    return;
+  }
+
+  if (data.mode === 'content') {
+    data.results.forEach((r, i) => {
+      const sevClass = `severity-${r.severity}`;
+      html += `
+        <div class="condition-card" style="animation-delay:${i*0.08}s">
+          <div class="condition-name">${r.condition}</div>
+          <div class="condition-meta">
+            <span>Confidence: ${(r.confidence * 100).toFixed(1)}%</span>
+            <span class="severity-badge ${sevClass}">${r.severity}</span>
+          </div>
+          <div class="confidence-bar"><div class="confidence-fill" style="width:${r.confidence * 100}%"></div></div>
+          <div class="med-list">
+            ${r.medicines.map(m => `<span class="med-pill">${m}</span>`).join('')}
+          </div>
+        </div>`;
+    });
+
+  } else if (data.mode === 'collaborative') {
+    data.results.forEach((r, i) => {
+      html += `
+        <div class="med-score-card" style="animation-delay:${i*0.05}s">
+          <span class="med-rank">#${i+1}</span>
+          <span class="med-score-name">${r.medicine}</span>
+          <span class="score-value">${r.predicted_rating.toFixed(2)}</span>
+        </div>`;
+    });
+
+  } else if (data.mode === 'association') {
+    data.results.forEach((r, i) => {
+      html += `
+        <div class="med-score-card" style="animation-delay:${i*0.05}s;flex-wrap:wrap;">
+          <span class="med-rank">#${i+1}</span>
+          <span class="med-score-name">${r.medicine}</span>
+          <span class="score-value" style="color:var(--purple);">${r.score.toFixed(2)}</span>
+          <div class="assoc-detail" style="width:100%;margin-top:0.4rem;padding-left:28px;">
+            <span class="tag">sup ${(r.support * 100).toFixed(1)}%</span>
+            <span class="tag">conf ${(r.confidence * 100).toFixed(0)}%</span>
+            <span class="tag">lift ${r.lift.toFixed(2)}</span>
+            <span style="color:var(--text-dim);font-size:0.65rem;">
+              triggered by: ${r.triggered_by.join(', ')}
+            </span>
+          </div>
+        </div>`;
+    });
+
+  } else { // hybrid
+    data.results.forEach((r, i) => {
+      html += `
+        <div class="med-score-card" style="animation-delay:${i*0.05}s">
+          <span class="med-rank">#${i+1}</span>
+          <span class="med-score-name">${r.medicine}</span>
+          <span class="score-value">${r.hybrid_score.toFixed(3)}</span>
+        </div>`;
+    });
+  }
+
+  el.innerHTML = html;
+}
+</script>
+</body>
+</html>

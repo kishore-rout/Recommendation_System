@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedRec — Model Analytics</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0e17; --surface: #121929; --border: #243049;
+  --text: #e2e8f0; --text-dim: #8896b3; --accent: #ff6b35;
+  --teal: #00d4aa; --purple: #b197fc; --radius: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; min-height:100vh; }
+header { padding:2rem 2rem 1.5rem; border-bottom:1px solid var(--border); display:flex; align-items:center; gap:1.5rem; }
+header a { color:var(--text-dim); text-decoration:none; font-family:'Space Mono',monospace; font-size:0.8rem; border:1px solid var(--border); padding:0.4rem 0.8rem; border-radius:6px; transition:all 0.2s; }
+header a:hover { border-color:var(--accent); color:var(--accent); }
+.title { font-family:'Space Mono',monospace; font-size:1.3rem; font-weight:700; color:var(--accent); }
+.content { max-width:1100px; margin:0 auto; padding:2rem; }
+.section-label { font-family:'Space Mono',monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--text-dim); margin:2.5rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--border); }
+.section-label:first-of-type { margin-top:0; }
+
+.summary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; margin-bottom:1.5rem; }
+.summary-card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:1rem; text-align:center; }
+.summary-card .val { font-family:'Space Mono',monospace; font-size:1.3rem; font-weight:700; color:var(--teal); }
+.summary-card .val.purple { color:var(--purple); }
+.summary-card .lbl { font-size:0.65rem; color:var(--text-dim); margin-top:0.2rem; font-family:'Space Mono',monospace; text-transform:uppercase; letter-spacing:1px; }
+
+.metrics-table { width:100%; border-collapse:collapse; margin-bottom:2rem; }
+.metrics-table th,.metrics-table td { padding:0.65rem 1rem; text-align:left; border-bottom:1px solid var(--border); font-size:0.85rem; }
+.metrics-table th { font-family:'Space Mono',monospace; font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-dim); }
+.metrics-table td:first-child { font-weight:600; }
+.metrics-table tr:hover td { background:rgba(255,107,53,0.04); }
+
+.chart-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+@media(max-width:800px){ .chart-grid{grid-template-columns:1fr;} }
+.chart-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:1rem; text-align:center; }
+.chart-card img { width:100%; border-radius:8px; margin-top:0.5rem; }
+.chart-card.full { grid-column:span 2; }
+@media(max-width:800px){ .chart-card.full{grid-column:span 1;} }
+.chart-title { font-family:'Space Mono',monospace; font-size:0.7rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:1px; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/">&larr; Back</a>
+  <span class="title">Model Analytics</span>
+</header>
+
+<div class="content">
+
+  <!-- ── Summary Cards ── -->
+  <div class="section-label">Overview</div>
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="val">{{ "%.1f"|format(metrics.test_accuracy * 100) }}%</div>
+      <div class="lbl">Classifier Accuracy</div>
+    </div>
+    <div class="summary-card">
+      <div class="val">{{ metrics.best_model }}</div>
+      <div class="lbl">Best Model</div>
+    </div>
+    {% if metrics.assoc %}
+    <div class="summary-card">
+      <div class="val purple">{{ metrics.assoc.n_rules }}</div>
+      <div class="lbl">Association Rules</div>
+    </div>
+    <div class="summary-card">
+      <div class="val purple">{{ metrics.assoc.n_freq_itemsets }}</div>
+      <div class="lbl">Frequent Itemsets</div>
+    </div>
+    <div class="summary-card">
+      <div class="val purple">{{ metrics.assoc.n_transactions }}</div>
+      <div class="lbl">Transactions</div>
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- ── Per-Condition Metrics ── -->
+  <div class="section-label">Per-Condition Classification Metrics</div>
+  <table class="metrics-table">
+    <thead><tr><th>Condition</th><th>Precision</th><th>Recall</th><th>F1 Score</th></tr></thead>
+    <tbody>
+      {% for condition, vals in metrics.per_class.items() %}
+      <tr>
+        <td>{{ condition }}</td>
+        <td>{{ "%.1f"|format(vals.precision * 100) }}%</td>
+        <td>{{ "%.1f"|format(vals.recall * 100) }}%</td>
+        <td>{{ "%.1f"|format(vals.f1 * 100) }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- ── Classification Visualisations ── -->
+  <div class="section-label">Classification &amp; Collaborative Filtering</div>
+  <div class="chart-grid">
+    <div class="chart-card"><div class="chart-title">Confusion Matrix</div><img src="/static/confusion_matrix.png" alt="Confusion Matrix"></div>
+    <div class="chart-card"><div class="chart-title">Feature Importances</div><img src="/static/feature_importance.png" alt="Feature Importances"></div>
+    <div class="chart-card"><div class="chart-title">Model Comparison (CV)</div><img src="/static/model_comparison.png" alt="Model Comparison"></div>
+    <div class="chart-card"><div class="chart-title">SVD Explained Variance</div><img src="/static/svd_variance.png" alt="SVD Variance"></div>
+    <div class="chart-card full"><div class="chart-title">Rating Distribution</div><img src="/static/rating_distribution.png" alt="Rating Distribution"></div>
+  </div>
+
+  <!-- ── Association Rule Visualisations ── -->
+  <div class="section-label">Association Rule Mining (Apriori)</div>
+  <div class="chart-grid">
+    <div class="chart-card full"><div class="chart-title">Top Rules by Lift</div><img src="/static/association_rules_lift.png" alt="Association Rules Lift"></div>
+    <div class="chart-card"><div class="chart-title">Support vs Confidence (colour = Lift)</div><img src="/static/association_scatter.png" alt="Support vs Confidence Scatter"></div>
+    <div class="chart-card"><div class="chart-title">Medicine Frequency in Prescriptions</div><img src="/static/item_frequency.png" alt="Item Frequency"></div>
+  </div>
+
+</div>
+</body>
+</html>
